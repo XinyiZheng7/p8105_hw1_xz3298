@@ -1,12 +1,7 @@
----
-title: "p8105_hw1_xz3298_q2"
-author: "xinyi zheng"
-date: "2023-09-14"
-output: html_document
----
-
+##load the library tidyverse first
 library(tidyverse)
 
+##create a data frame
 my_data <- data.frame(
   random_sample = rnorm(10),
   logical_vector = rnorm(10) > 0,
@@ -14,14 +9,18 @@ my_data <- data.frame(
   factor_vector = factor(sample(1:3, 10, replace = TRUE))
 )
 
-
+##change logical,charater and factor into numeric
 numeric_logical <- as.numeric(my_data$logical_vector)
 numeric_character <- as.numeric(as.character(my_data$character_vector))
 numeric_factor <- as.numeric(as.character(my_data$factor_vector))
 
+##calculate the mean
 mean_logical <- mean(numeric_logical)
 mean_character <- mean(numeric_character)
 mean_factor <- mean(numeric_factor)
+
+##print the result
+print(my_data)
 
 
 
