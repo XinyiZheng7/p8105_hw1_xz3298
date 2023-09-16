@@ -1,19 +1,21 @@
----
-title: "p8105_hw1_xz3298_q1"
-author: "xinyi zheng"
-date: "2023-09-14"
-output: html_document
----
-
+##load the moderndive library
 library(moderndive)
-data(early_january_weather)
-str(early_january_weather)
+
+##load the dataset
+data("early_january_weather")
+
+##describe the dataset
+?early_january_weather
+
+##calculate the number of rows and colums
 n_rows <- nrow(early_january_weather)
 n_cols <- ncol(early_january_weather)
 mean_temp <- mean(early_january_weather$temp)
 
+##load the ggplot library
 library(ggplot2)
 
+##get the scatterplot
 scatterplot <- ggplot(early_january_weather, aes(x = time_hour, y = temp, color = humid)) +
   geom_point() +
   labs(x = "Time Hour", y = "Temperature", color = "Humidity")
