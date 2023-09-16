@@ -1,5 +1,5 @@
 ---
-title: "p8105_hw1_xz3298"
+title: "p8105_hw1_xz3298_q1"
 author: "xinyi zheng"
 date: "2023-09-14"
 output: html_document
